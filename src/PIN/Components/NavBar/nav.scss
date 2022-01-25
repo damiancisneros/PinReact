@@ -1,0 +1,85 @@
+@import "../../Styles/Sass/02-Base/Color.scss";
+@import "../../Styles/Sass/01-Utilitles/mixins.scss";
+
+//NAV_MENU
+
+%letras 
+{
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    word-spacing: .013rem;
+    letter-spacing: .015rem;
+    font-weight: 500;
+}
+
+.container_menu 
+{
+    padding-left: 6%;
+    width:100%;
+    border-bottom: 1px solid $color-naranja;   
+}
+
+.nav_menu_1
+{
+    padding-top: 2%;
+    justify-content: center; 
+    @extend %letras;    
+}
+
+.container_ul
+{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:80%;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.menu__a 
+{
+    color: $color-blanco;  
+    text-decoration: none;  
+    &:hover 
+    {
+        color: $color-negro-claro2;
+    }   
+}  
+
+@media only screen and (min-width:990px)
+{
+    .container_menu
+    {
+        height: 12vh;
+    }
+        .nav_menu_1
+        {
+            justify-content: end;
+            padding-top: 0%;
+            padding-right: 2%;
+        }
+            .container_ul
+            {
+                width: 60%;
+                justify-content: space-evenly;
+            }
+}
+
+@media only screen and (max-width:500px)
+{
+    .logo_1
+    {
+        width: 80px;
+    }
+    .nav_menu_1
+    {
+        padding-top: 0%;
+    }
+        .container_ul
+        {
+            flex-direction: column;
+        }
+}
+
+    //FIN NAV_MENU

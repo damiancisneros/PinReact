@@ -1,0 +1,79 @@
+@import "../Styles/Sass/02-Base/Color.scss";
+
+@import "../Styles/Sass/01-Utilitles/mixins.scss";
+
+%letras 
+{
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    word-spacing: .013rem;
+    letter-spacing: .015rem;
+    font-weight: 500;
+}
+
+.container_4
+{
+    display: flex;
+    @include width-heigth (100%, 80vh);
+}
+
+.img_4
+{  
+    width: 60%;
+    order: 1;
+}
+
+aside
+{
+    @include width-heigth(40%, 50%);
+    align-self: center;
+}
+
+.container_acordion
+{
+    left: 6rem;
+    width: 50%;
+}
+
+h3
+{
+    @extend %letras;
+    font-weight: 600;
+    color: $color-negro-claro2;
+}
+
+.parrafolista 
+{
+    @extend %letras;
+    color: $color-negro-claro2;
+}
+
+@media only screen and (max-width:950px)
+{
+    .container_4
+    {
+       height: 100vh;
+    }
+}
+
+@media only screen and (max-width:660px)
+{
+    .container_4
+    {
+    background-size: cover;
+    background-repeat: round;
+    }
+    aside
+    {
+        align-self: flex-start;
+    }
+}    
+
+@media only screen and (max-width:480px)
+{
+    .container_acordion
+    {
+        left: 0rem;
+        width: 75%;
+    }
+}

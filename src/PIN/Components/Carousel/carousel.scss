@@ -1,0 +1,110 @@
+@import "../../Styles/Sass/02-Base/Color.scss";
+@import "../../Styles/Sass/01-Utilitles/mixins.scss";
+
+/*ARTICULO_1*/
+
+%letras 
+{
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    word-spacing: .013rem;
+    letter-spacing: .015rem;
+    font-weight: 500;
+}
+
+.container_carousel
+{
+    width: 100%;
+    position: relative;
+    top: 23%;
+}
+
+.container_art_1
+{
+    display:inline-flex;
+    flex-flow: column wrap;
+    width:48%;
+    padding-left: 7%;
+}
+
+.titulo_1 
+{
+    margin: 0%;
+    padding-bottom: 6%;
+    @include tipografia;
+    word-spacing: .3rem;
+    letter-spacing: .1rem; 
+} 
+   
+.parrafo_1 
+{
+    width: 60%;
+    padding-bottom: 2%;   
+    color: $color-blanco;
+    @extend %letras;           
+}
+
+
+.boton_1 
+{ 
+    @include width-heigth(150px, 50px);              
+    @extend %letras;
+    background: $color-naranja;
+    border-radius: 25px 25px;
+    border: 0px;
+    color: $color-blanco; 
+    &:hover 
+    {
+        background: #bf6e39;
+    }    
+}
+
+.container_botones
+{
+    height: 15%;
+    margin: 0%;
+    top: 120%;
+    left: 7%;
+    justify-content: start;
+}
+
+.boton_carousel
+{
+    border-radius: 50%;
+}
+
+@media only screen and (max-width:1050px)
+{
+    .container_carousel
+    {
+        top:15%;
+    }    
+        .titulo_1      
+        {       
+        font-size: 2rem;
+        }
+            .parrafo_1
+            {
+                width: 85%;
+            }
+}
+
+@media only screen and (max-width:550px)
+{
+    .container_carousel
+    {
+        top:5%;
+    }
+        .container_art_1
+        {
+            width:100%;
+        }
+            .boton_1
+            {
+                @include width-heigth(130px, 30px);
+            }
+                .container_botones
+                {
+                    top:110%;
+                }
+}

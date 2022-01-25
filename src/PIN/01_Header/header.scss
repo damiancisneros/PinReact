@@ -1,0 +1,11 @@
+@import "../Styles/Sass/01-Utilitles/mixins.scss";
+
+.Header-Container 
+{   
+    background: transparent url('../public/img/Paisaje.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-repeat: round;
+    @include width-heigth;
+    display: flex;
+    flex-flow: column wrap;
+}
